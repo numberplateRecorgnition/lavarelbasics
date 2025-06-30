@@ -1,0 +1,79 @@
+/* -------- Base Layout -------- */
+body {
+    padding-top: 70px;           /* keep content below fixed navbar */
+}
+
+.app-footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* -------- Form Tweaks -------- */
+form .form-control {
+    border-radius: .25rem;
+}
+
+form .form-control:focus {
+    border-color: #0d6efd;       /* Bootstrap primary */
+    box-shadow: none;
+}
+
+form .btn-primary,
+form button[type="submit"] {
+    border-radius: .25rem;
+}
+
+/* -------- Table Styles -------- */
+.table-custom {
+    border-collapse: collapse;
+}
+
+/* Cell padding & border */
+.table-custom th,
+.table-custom td {
+    padding: .75rem;
+    border: 1px solid #dee2e6;
+}
+
+/* Striped rows */
+.table-custom tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+}
+
+/* Hover */
+.table-custom tbody tr:hover {
+    background-color: rgba(13,110,253,.1);   /* subtle blue */
+}
+
+/* Responsive “stacked” table on phones */
+@media (max-width: 767.98px) {
+    .table-custom thead { display: none; }
+
+    .table-custom,
+    .table-custom tbody,
+    .table-custom tr,
+    .table-custom td {
+        display: block;
+        width: 100%;
+    }
+
+    .table-custom tr { margin-bottom: .75rem; }
+
+    .table-custom td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table-custom td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        text-align: left;
+    }
+}

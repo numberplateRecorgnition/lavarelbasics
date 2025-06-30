@@ -1,0 +1,21 @@
+php artisan make:controller HomeController
+php artisan make:controller PostController
+php artisan make:controller CategoryController
+php artisan make:controller AdminPanelController
+php artisan make:controller AuthController
+
+
+
+
+
+//database
+php artisan migrate
+php artisan make:migration create_Categories_table
+php artisan make:migration create_Posts_table
+php artisan make:migration create_Comments_table 
+php artisan make:migration create_likes_table
+
+//models
+php artisan make:model Category
+php artisan make:model Post
+php artisan make:model User
